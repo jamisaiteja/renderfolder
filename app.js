@@ -9,7 +9,7 @@ let port = process.env.PORT || 9310;
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
 let bodyParser = require('body-parser');
-let mongoUrl = "mongodb://localhost:27017";
+let mongoUrl = "mongodb+srv://jami:Venkatsai@cluster0.aiz67sc.mongodb.net/?retryWrites=true&w=majority";
 let db;
 app.use(cors());
 //body-parser is one of package through which post call happens
