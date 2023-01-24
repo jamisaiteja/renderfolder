@@ -40,7 +40,7 @@ app.get('/details', function(req,res){
 
 //get Best Sellers
 app.get('/bestsellers', function(req,res){
-    db.collection('Bestsellers').find().toArray((err,data)=>{
+    db.collection('BestSellers').find().toArray((err,data)=>{
         if(err) throw err;
         res.send(data)
     })
