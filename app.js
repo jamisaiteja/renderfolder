@@ -119,7 +119,7 @@ app.post('/item',(req,res)=>{
 app.post('/placeOrder', function(req,res){
     db.collection('orders').insert(req.body,(err,result)=>{
         if(err) throw err;
-        res.send('order created')
+        res.send('order Created')
     })
 })
 
