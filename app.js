@@ -88,6 +88,27 @@ app.get('/detail/:itemId', function(req,res){
     })
 })
 
+
+//Details of BestSellers item
+app.get('/bsDetail/:itemId', function(req,res){
+    console.log(req.params.itemId) 
+    let item_id = Number(req.params.itemId)
+    db.collection('BestSellers').find({id:item_id}).toArray((err,data)=>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+//Details of Boneless cuts item
+app.get('/bcDetail/:itemId', function(req,res){
+    console.log(req.params.itemId) 
+    let item_id = Number(req.params.itemId)
+    db.collection('Bonelesscuts').find({id:item_id}).toArray((err,data)=>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
 // order
 app.get('/orders', function(req,res){
     let query = {}
