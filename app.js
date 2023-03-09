@@ -125,7 +125,7 @@ app.get('/orders', function(req,res){
 
 //Item Details
 
-app.post('/item',(req,res)=>{
+app.post('/product',(req,res)=>{
     if(Array.isArray(req.body.id)){
         db.collection('Details').find({id:{$in:req.body.id}}).toArray((err,data)=>{
             if(err) throw err;
