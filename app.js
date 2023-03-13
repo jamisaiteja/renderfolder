@@ -58,7 +58,7 @@ app.get('/bonelesscuts', function(req,res){
 app.get('/CategoryDetail/:catId', function(req,res){
     console.log(req.params.catId) 
     let catId = Number(req.params.catId)
-    let subCatId = req.query.subCatId;
+    let subCatId = Number(req.query.subCatId);
     console.log(req.query.subCatId)
     let query = {};
 
